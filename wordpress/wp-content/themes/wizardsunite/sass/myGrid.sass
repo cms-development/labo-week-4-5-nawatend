@@ -1,0 +1,118 @@
+@mixin generateCols($suffix) 
+    $cols: 12
+    $bw: 0
+    $tw: 0
+
+    @if $suffix=='xs' 
+        $bw: 0
+        $tw: 320
+
+        .col-0
+            display: flex
+            flex-wrap: wrap
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$i} 
+                display: flex
+                flex-wrap: wrap
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+    @else if $suffix=='s'
+        $bw: 321
+        $tw: 480
+
+        .col-#{$suffix}-0
+            display: flex
+            flex-wrap: wrap
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: flex
+                flex-wrap: wrap
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+
+    @else if $suffix=='md' 
+        $bw: 481
+        $tw: 768
+        .col-#{$suffix}-0
+            display: flex
+            flex-wrap: wrap
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: flex
+                flex-wrap: wrap
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+    @else if $suffix=='lg' 
+        $bw: 769
+        $tw: 1024
+        .col-#{$suffix}-0
+            display: flex
+            flex-wrap: wrap
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: flex
+                flex-wrap: wrap
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+    @else if $suffix=='xl' 
+        $bw: 1025
+        $tw: 1440
+        .col-#{$suffix}-0
+            display: flex
+            flex-wrap: wrap
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: flex
+                flex-wrap: wrap
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+    @else 
+        $bw: 1441
+        $tw: 9999999
+        .col-#{$suffix}-0
+            display: flex
+            flex-wrap: wrap
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols
+            .col-#{$suffix}-#{$i} 
+                display: flex
+                flex-wrap: wrap
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+
+
+
+@media screen and (min-width: 0px) and (max-width: 320px)
+    @include generateCols('xs')
+
+@media screen and (min-width: 321px) and (max-width: 480px)
+    @include generateCols('s')
+    
+@media screen and (min-width: 481px) and (max-width: 768px)
+    @include generateCols('md')
+    
+@media screen and (min-width: 769px) and (max-width: 1024px)
+    @include generateCols('lg')
+    
+@media screen and (min-width: 1025px) and (max-width: 1440px)
+    @include generateCols('xl')
+
+@media screen and (min-width: 1441px) and (max-width: 9999999px)    
+    @include generateCols('xxl')

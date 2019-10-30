@@ -1,0 +1,52 @@
+{% extends('index.twig') %}
+
+{% block body %}
+
+
+    <div class="main-wrapper">
+        <!-- page content -->
+        <div class="container">
+
+            <!-- cards level 1-->
+            <div class="row cards">
+                <div class="col-12">
+                    <h2>Magical Creatures</h2>
+                    <p>The following Foundables can be found in the Care of Magical Creatures category of the Registry
+                        in Harry Potter: Wizards Unite.</p>
+                </div>
+                <!-- card 1.1 -->
+
+                {% for creature in posts %}
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <div class="card_image_container">
+                                <img src="{{ creature.thumbnail.src }}" alt="{{ creature.title }}">
+                            </div>
+                            <div class="card_txt_container">
+                                <h2><a href="{{ creature.link }}">{{ creature.title }}</a></h2>
+                                <p>
+                                    {{creature.description}}
+                                </p>
+                                <ul>
+                                    <li><strong>XP</strong> {{ creature.xp }}</li>
+                                    <li><strong>Spell</strong> {{ creature.spell }}</li>
+                                    <li><strong>Confoundable</strong> {{ creature.confoundable }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end card-->
+                    </div>
+                    <!-- end col-->
+                {% endfor %}
+
+
+            </div>
+            <!-- end row-->
+
+        </div>
+        <!-- end container-->
+    </div>
+    <!-- end main-wrapper-->
+
+{% endblock %}

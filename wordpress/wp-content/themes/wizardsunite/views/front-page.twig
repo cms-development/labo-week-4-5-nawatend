@@ -1,0 +1,44 @@
+{% extends('index.twig') %}
+
+{% block body %}
+
+    <div
+        class="main-wrapper">
+        <!-- page content -->
+        <div
+            class="container">
+            <!-- cards level 1-->
+            <div
+                class="row">
+                <!-- card 1.1 -->
+                <div class="col-12 col-md-9">
+                    <h2>Content</h2>
+                    <p>
+                        Fan List
+                    </p>
+                    <ul>
+                        {{posts[1].post_content}}
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h2>Home Pagina</h2>
+                    <p>
+                    Wizards Unite Fanpage
+                                                                        Magical Creatures
+                                                                        The following Foundables can be found in the Care of Magical Creatures category of the Registry
+                                                                                                in Harry Potter: Wizards Unite.
+                    </p>
+                    <aside id="%1$s" class="widget %2$s">
+                        {{ fan_sidebar}}
+                    </aside>
+                </div>
+
+            </div>
+            <!-- end row-->
+
+        </div>
+        <!-- end container-->
+    </div>
+    <!-- end main-wrapper-->
+
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ theme.path }}/style.css">
+    {{ function('wp_head') }}
+</head>
+<header class="header-wrapper" style="background-image: url('{{ wizardsunite_header_image_url }}');">
+
+    <a href="/" class="logo"><img src="{{ wizardsunite_logo_url}}" alt="Wizards Unite"></a>
+
+    <!-- navigatie -->
+    <div class="container header_container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h1 class="logo">{{ site.title }}</h1>
+            </div>
+            <div class="col-12 col-md-6 nav">
+
+                <nav class="nav-main">
+                    <ul class="navbar-right">
+
+                        {% for item in main_menu.items %}
+                            <li class="page_item">
+                                <a class="nav-main__link" href="{{ item.link }}"
+                                   title="{{ item.title }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

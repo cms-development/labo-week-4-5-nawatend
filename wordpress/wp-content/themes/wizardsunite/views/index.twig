@@ -1,0 +1,21 @@
+
+{% include 'header.twig' %}
+
+{% block body %}
+
+    {% for post in posts %}
+
+        {{ post.name }}
+    {% endfor %}
+
+    <br>
+    This is index
+
+
+
+
+
+
+{% endblock %}
+
+{% include 'footer.twig' %}
