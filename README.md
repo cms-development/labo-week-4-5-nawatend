@@ -1,16 +1,22 @@
-```txt
-username: admin
-password: admin
-```
+# Project Magical Creature - Powered By Nawang Production
 
-1. React App
-```bash
-yarn install
-```
+Creating magical creatures website with backoffice as Wordpress and frontoffice as React App.
 
-2. Make .env file in root
-```env
-REACT_APP_WP_API_URL='http://localhost:8080/wp-json/wp/v2'
-REACT_APP_JWT_URL='http://localhost:8080/wp-json/jwt-auth/v1'
-REACT_APP_REACT_URL='http://localhost:3000'
-```
+* Checkout screenshots of wordpress site in screenshot folder
+* More information about frontend is README.me of frontend folder
+
+
+
+
+Want to watch what I have developed?
+Youtube - https://youtu.be/N0h8UftHmhQ
+
+
+## Acknowledgments
+* Good excercise to refresh your skills
+
+
+Double Peace
+
+Nawang Tendar
+
