@@ -1,8 +1,8 @@
 # Project Magical Creature - Powered By Nawang Production
 
 ### Test user
-*username: admin
-*password: admin
+* username: admin
+* password: admin
 
 Creating magical creatures website with backoffice as Wordpress and frontoffice as React App.
 
