@@ -1,0 +1,134 @@
+@mixin generateCols($suffix) 
+    $cols: 12
+    $bw: 0
+    $tw: 0
+
+    @if $suffix=='xs' 
+        $bw: 0
+        $tw: 567
+
+        .col-0
+            display: block
+            float: left
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$i} 
+                display: block
+                float: left
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+        .form__container
+            .image__preview
+                margin-top: 20px
+                margin-bottom: 20px
+    @else if $suffix=='s'
+        $bw: 577
+        $tw: 767
+
+        .col-#{$suffix}-0
+            display: block
+            float: left
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: block
+                float: left
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+        .form__container
+            .image__preview
+                margin-top: 20px
+                margin-bottom: 20px
+
+    @else if $suffix=='md' 
+        $bw: 768
+        $tw: 991
+        .col-#{$suffix}-0
+            display: block
+            float: left
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: block
+                float: left
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+        .form__container
+            .image__preview
+                margin-top: 20px
+                margin-bottom: 20px
+    @else if $suffix=='lg' 
+        $bw: 992
+        $tw: 1199
+        .col-#{$suffix}-0
+            display: block
+            float: left
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: block
+                float: left
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+        .form__container
+            .image__preview
+                margin-left: 20px
+
+        
+    @else if $suffix=='xl' 
+        $bw: 1200
+        $tw: 1440
+        .col-#{$suffix}-0
+            display: block
+            float: left
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols 
+            .col-#{$suffix}-#{$i} 
+                display: block
+                float: left
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+    @else 
+        $bw: 1441
+        $tw: 9999999
+        .col-#{$suffix}-0
+            display: block
+            float: left
+            width: 0%
+            box-sizing: border-box
+
+        @for $i from 1 through $cols
+            .col-#{$suffix}-#{$i} 
+                display: block
+                float: left
+                width: 100%/($cols/$i)
+                box-sizing: border-box
+
+
+
+@media screen and (min-width: 0px) and (max-width: 576px)
+    @include generateCols('xs')
+
+@media screen and (min-width: 577px) and (max-width: 767px)
+    @include generateCols('s')
+    
+@media screen and (min-width: 768px) and (max-width: 991px)
+    @include generateCols('md')
+    
+@media screen and (min-width: 992px) and (max-width: 1199px)
+    @include generateCols('lg')
+    
+@media screen and (min-width: 1200px)
+    @include generateCols('xl')
+
+

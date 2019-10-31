@@ -1,0 +1,15 @@
+
+//functions
+@import './mixins.sass';
+
+//components style
+@import './components/cardContainer.scss';
+@import './components/card.sass';
+@import './components/form.sass';
+@import './components/detail.sass';
+
+//app 
+@import './App.scss';
+
+//responsiveness
+@import './responsive/myGrid.sass';

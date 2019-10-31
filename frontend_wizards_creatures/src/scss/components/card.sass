@@ -1,0 +1,52 @@
+$orange: rgba(243,115,53,1) 
+.card 
+    position: relative
+    @include magicBoxShadow()
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    //margin: 1em auto
+    padding: 2em
+    min-height: 600px
+    transform: rotate(90deg)
+    color: white
+
+    .card_text_container
+        white-space: wrap
+        text-overflow: ellipsis
+    .card_image_container
+        display: flex
+        justify-content: center
+        
+    img
+        position: relative
+        height: 250px
+        width: 80%
+        overflow: hidden
+        margin: 0 auto
+
+    .delete_card
+        position: absolute
+        top: 0
+        right: 0
+    h2
+        color: $orange  
+        cursor: pointer
+
+    .card__buttons
+        position: absolute
+        width: calc(100% - 4em)
+        height: 40px
+        //background-color: #fff
+
+        display: flex
+        justify-content: flex-end
+
+        bottom: -20px
+
+    #goDetail
+        cursor: pointer
+        
+.card:hover
+    @include magicBoxShadowLight()
